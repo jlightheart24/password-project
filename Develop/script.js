@@ -5,6 +5,8 @@ var useNumber = window.confirm('Do you want to use Numbers?');
 var useSymbol = window.confirm('Do you want to use Symbols?');
 var pwString = "";
 
+
+// functions to create random charachters
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
@@ -22,11 +24,10 @@ function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
-
+// this function generates the password
 function generatePassword()   {
   for (i=0; i < pwLength; i++) {
     var selectChar = Math.floor(Math.random() * 4);
-    console.log(selectChar);
   
     if (selectChar === 0 && useSymbol === true) {
       var pwChar = getRandomSymbol()
@@ -38,8 +39,7 @@ function generatePassword()   {
       var pwChar = getRandomLower()
     };
   
-    pwString = pwString + pwChar
-    console.log(pwString)
+    pwString = pwString + pwChar;
 }}
 
 
